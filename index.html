@@ -8,77 +8,74 @@
 </head>
 <body>
     <header>
-        <div class="logo">portfolio.</div>
+        <div class="logo"></div>
         <nav>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger" id="menuToggle">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </nav>
+
+	<div class="logo">port<strong>folio</strong></div>
+	<ul class="links">
+		<li><a href="#home">Home</a></li>
+		<li><a href="#about">About</a></li>
+		<li><a href="#skills">Skills</a></li>
+		<li><a href="#project">Projects</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
+	<label for="nav-toggle" class="icon-burger">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</label>
+</nav>
     </header>
+   <style>
+ body {
+	padding: 40px;
+	margin: 0;
+}
+
+
+nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right:0;
+	top: 0;
+	font-family: 'Montserrat', sans-serif;
+	padding-:  0 30px;
+	height: 25px;
+	background-color:;
+}
+nav .logo {
+	float: left;
+	width: 10%;
+	height: 50%;
+	display: flex;
+	align-items: right;
+	font-size: 25px;
+margin-top:0px;
+	
+}
+nav .links {
+	float: right;
+	padding: 0;
+	margin-right:0px;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items:right;
+}
+nav .links li {
+	list-style: none;
+ align-item:right;
+ margin-right:px;
+}
+nav .links a {
+	display: block;
+	padding:0;
     
-   <script>
-        
-        const menuToggle = document.getElementById('menuToggle');
-        const menu = document.querySelector('.menu');
-        const menuItems = document.querySelectorAll('.menu li a');
-
-        // Toggle menu when hamburger icon is clicked
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-
-        // Close the menu when a menu item is clicked
-        menuItems.forEach(item => {
-            item.addEventListener('click', () => {
-                menu.classList.remove('active');
-            });
-        });
-
-        // Close the menu when clicking outside of it
-        document.addEventListener('click', (event) => {
-            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-                menu.classList.remove('active');
-            }
-        });
-         document.getElementById("contactForm").addEventListener("submit", function(event){
-            event.preventDefault(); // Prevent form submission
-
-            let name = document.getElementById("name").value.trim();
-            let email = document.getElementById("email").value.trim();
-            let subject = document.getElementById("subject").value.trim();
-            let message = document.getElementById("message").value.trim();
-
-            // Validate if fields are empty
-            if (name === "" || email === "" || subject === "" || message === "") {
-                alert("All fields are required.");
-                return false;
-            }
-
-            // Validate email format
-            if (!validateEmail(email)) {
-                alert("Please enter a valid email address.");
-                return false;
-            }
-               alert("Send Successfully!");
-        });
-
-        function validateEmail(email) {
-            // Simple email regex validation
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(String(email).toLowerCase());
-        }
-    </script>
-    
-    <div class="container" id="home">
+}
+    </style>
+      <div class="container" id="home">
         <div class="home-content">
             <div class="text-content">
                 <h3 class="part-1">Hello, Myself</h3>
@@ -100,7 +97,7 @@
                     </a>
                 </div>
             </div>
-            <img src="12.jpg" class="circle-image" alt="Description of image">
+            
         </div>
     </div>
     
@@ -184,12 +181,14 @@
 <br>
          <a href="information.html">View Login</a><br>
          <a href="dom.html">View DOM</a>
-<br><br><br>  <p>Document that provides a detailed overview of a project's progress, objectives, and outcomes. It's a formal record of a project's.</p>
+<br><br><br>
+  <p>Document that provides a detailed overview of a project's progress, objectives, and outcomes. It's a formal record of a project's.</p>
     
         </div>
     </div>
 </section>
-<section class="contact" id="contact"></section>
+
+<section class="contact" id="contact"></section>
 <div class="container">
     <form id="contactForm">
         <h2>Contact</h2>
@@ -243,7 +242,8 @@
 </script>
 
 
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
         <div class="contact-info" data-aos="fade-up">
     <h3>Contact Me</h3>
