@@ -570,7 +570,10 @@ a:hover {
     .social-media {
         justify-content: center;
         margin-top: 15px;
+        display:flex;
     }
+    
+    
     .about-container p{
        font-size: 15px;
     }
@@ -819,9 +822,9 @@ nav ul li a {
    }
    .button a {
       color: white; 
-      background-color: #0ef;/* Button text color */
-      text-decoration: none;        /* Remove underline from the link */
-      display: block;               /* Ensure the link covers the button area */
+      background-color: #0ef;
+      text-decoration: none;         
+      display: block;              
 }
    .skills-section {
       padding-top: 10px; 
@@ -944,7 +947,7 @@ input, textarea {
     .contact-info a:hover {
         text-decoration: underline; 
     }
-}
+
 
 h2 {
    font-size: 28px; 
@@ -969,6 +972,38 @@ button {
     display: none; 
     font-size: 30px;
     cursor: pointer;
+}
+   nav {
+        height: 50px; 
+        padding: 0 70px; 
+      margin:0;
+    }
+    
+    nav .logo {
+        width: 50%;  f
+        font-size: 20px; 
+    }
+
+    nav .links {
+        width: 10%;
+        justify-content: flex-end; 
+        padding:30px 40px;
+        margin-right:50px;
+    }
+    
+    nav .links li {
+        margin-right: 2px; 
+        margin-bottom: px;
+        line-height: 70vh;
+    }
+
+    nav .links a {
+        padding: 5px 40px; 
+        font-size: 17px;
+        margin-left: 20px;
+        margin-bottom: 30px;
+        line-height: 5px;
+    }
 }
 @media (max-width: 480px) {
 	nav {
@@ -1000,6 +1035,7 @@ button {
 		font-size: 9px;
 	   max-weight:700px;
 	}
+  
 }
 
 
